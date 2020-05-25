@@ -20,6 +20,8 @@ public class User {
 	private int user_level;
 	private Date birth;
 	private Date regdate;
+	
+	
 	public String getUser_id() {
 		return user_id;
 	}

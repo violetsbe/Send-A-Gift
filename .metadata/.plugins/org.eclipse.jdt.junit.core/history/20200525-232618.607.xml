@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="aPlanner_2020 (1)" project="SendAGift_202005" tests="6" started="6" failures="0" errors="1" ignored="0">
+  <testsuite name="com.violet.test.MySQLConnectionTest" time="4.575">
+    <testcase name="testConnection" classname="com.violet.test.MySQLConnectionTest" time="4.575"/>
+  </testsuite>
+  <testsuite name="com.violet.test.DataSourceTest" time="0.027">
+    <testcase name="testConnection" classname="com.violet.test.DataSourceTest" time="0.027"/>
+  </testsuite>
+  <testsuite name="com.violet.test.MyBatisTest" time="0.016">
+    <testcase name="testFactory" classname="com.violet.test.MyBatisTest" time="0.001"/>
+    <testcase name="testSession" classname="com.violet.test.MyBatisTest" time="0.015"/>
+  </testsuite>
+  <testsuite name="com.violet.test.ItemDAOTest" time="0.011">
+    <testcase name="testInsertItem" classname="com.violet.test.ItemDAOTest" time="0.011">
+      <error>org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: &#13;
+### Error updating database.  Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for com.violet.mapper.ItemMapper.create&#13;
+### Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for com.violet.mapper.ItemMapper.create&#13;
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:79)&#13;
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:447)&#13;
+	at com.sun.proxy.$Proxy20.insert(Unknown Source)&#13;
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:279)&#13;
+	at com.violet.persistence.ItemDAOImpl.insertItem(ItemDAOImpl.java:23)&#13;
+	at com.violet.test.ItemDAOTest.testInsertItem(ItemDAOTest.java:34)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:73)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:83)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)&#13;
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)&#13;
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)&#13;
+Caused by: org.apache.ibatis.exceptions.PersistenceException: &#13;
+### Error updating database.  Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for com.violet.mapper.ItemMapper.create&#13;
+### Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for com.violet.mapper.ItemMapper.create&#13;
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)&#13;
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:200)&#13;
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)&#13;
+	... 35 more&#13;
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for com.violet.mapper.ItemMapper.create&#13;
+	at org.apache.ibatis.session.Configuration$StrictMap.get(Configuration.java:860)&#13;
+	at org.apache.ibatis.session.Configuration.getMappedStatement(Configuration.java:693)&#13;
+	at org.apache.ibatis.session.Configuration.getMappedStatement(Configuration.java:686)&#13;
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)&#13;
+	... 41 more&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="com.violet.test.UserDAOTest" time="0.135">
+    <testcase name="testTime" classname="com.violet.test.UserDAOTest" time="0.135"/>
+  </testsuite>
+</testrun>

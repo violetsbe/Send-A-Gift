@@ -1,0 +1,37 @@
+package com.violet.test;
+
+import javax.inject.Inject;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.violet.domain.Item;
+import com.violet.persistence.ItemDAO;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {"file:src/main/webapp/WEB-INF/spring/**/root-context.xml"})
+public class ItemDAOTest {
+
+	@Inject
+	ItemDAO dao;
+	
+	// 상품 등록 테스트
+	//@Test
+	public void testInsertItem() throws Exception {
+		//item_id, cate_id, prov_id, item_title, item_price, item_stock, item_detail
+		Item item = new Item();
+		item.setItem_id("ITEM0001");
+		item.setCate_id("CA0003");
+		item.setProv_id("PR0001");
+		item.setItem_title("홈 필로우 미스트 세트");
+		item.setItem_price(30000);
+		item.setItem_stock(1000);
+		item.setItem_detail("잠들기 전 베개에 뿌려주는 릴랙싱 스프레이.\r\n" + 
+				"잠들기 전 베개 위에 뿌려 주면 5가지 에션셜 오일이 함유된 아로마 향이 낮 동안 쌓였던 피로를 풀어주고 심신을 안정시켜 릴랙싱 효과를 선사합니다.");
+		
+		dao.insertItem(item);
+	}
+	
+}

@@ -15,13 +15,10 @@ public class Item {
 	private String item_filename;
 	private String tag_id;
 	private String tag_name;
-	private String wish_id;
 	
 	private int item_price;
 	private int item_stock;
-	private int wish_open;
 	private Date item_regdate;
-	private Date wish_regdate;
 	
 	
 	public String getItem_id() {
@@ -90,12 +87,7 @@ public class Item {
 	public void setTag_name(String tag_name) {
 		this.tag_name = tag_name;
 	}
-	public String getWish_id() {
-		return wish_id;
-	}
-	public void setWish_id(String wish_id) {
-		this.wish_id = wish_id;
-	}
+
 	public int getItem_price() {
 		return item_price;
 	}
@@ -108,25 +100,13 @@ public class Item {
 	public void setItem_stock(int item_stock) {
 		this.item_stock = item_stock;
 	}
-	public int getWish_open() {
-		return wish_open;
-	}
-	public void setWish_open(int wish_open) {
-		this.wish_open = wish_open;
-	}
+
 	public Date getItem_regdate() {
 		return item_regdate;
 	}
 	public void setItem_regdate(Date item_regdate) {
 		this.item_regdate = item_regdate;
 	}
-	public Date getWish_regdate() {
-		return wish_regdate;
-	}
-	public void setWish_regdate(Date wish_regdate) {
-		this.wish_regdate = wish_regdate;
-	}
-	
-	
+
 
 }

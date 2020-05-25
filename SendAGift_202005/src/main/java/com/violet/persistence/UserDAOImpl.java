@@ -31,7 +31,7 @@ public class UserDAOImpl implements UserDAO {
 	}
 
 	@Override
-	public User selectUser(String user_id) throws Exception {
+	public User readUser(String user_id) throws Exception {
 		
 		return sqlSession.selectOne(namespace+".selectMember", user_id);
 	}

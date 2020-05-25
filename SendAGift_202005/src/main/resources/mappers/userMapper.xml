@@ -15,7 +15,7 @@
 	(#{user_id}, #{id}, #{pwd}, #{user_name}, #{birth}, #{gender}, #{email}, #{user_level}, #{status_message})
 	</insert>
 	
-	<select id="selectUser" resultType="com.violet.domain.User">
+	<select id="readUser" resultType="com.violet.domain.User">
 	SELECT * FROM user WHERE user_id = #{user_id}
 	</select>
 	

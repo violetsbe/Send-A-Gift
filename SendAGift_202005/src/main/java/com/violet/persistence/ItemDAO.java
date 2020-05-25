@@ -1,25 +1,32 @@
 package com.violet.persistence;
 
+import java.util.List;
+
 import com.violet.domain.Item;
 
 public interface ItemDAO {
 
 	// 상품 등록(추가)
-	public void insertItem(Item item);
+	public void insertItem(Item item) throws Exception;
+	
+	// 상품 보기
+	public Item readItem(String item_id) throws Exception;
 	
 	// 상품 수정
+	public void updateItem(Item item) throws Exception;
 	
 	// 상품 삭제
+	public void deleteItem(String item_id) throws Exception;
+	
+	// 상품 목록 보기
+	public List<Item> itemListAll() throws Exception;
 	
 	
-	// 위시리스트 추가
-	
-	// 위시리스트 삭제
-	
-	// 위시 공개 여부 수정
 	
 	
 	// 태그 추가
+	
+	// 태그 보기
 	
 	// 태그 삭제
 	

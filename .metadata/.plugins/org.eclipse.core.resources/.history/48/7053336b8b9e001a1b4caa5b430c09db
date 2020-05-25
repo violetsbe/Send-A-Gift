@@ -1,0 +1,5 @@
+package com.violet.persistence;
+
+public interface WishlistDAO {
+
+}

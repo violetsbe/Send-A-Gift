@@ -12,7 +12,7 @@ public interface UserDAO {
 	public void insertUser(User user);
 	
 	// 유저 정보 확인
-	public User selectUser(String user_id) throws Exception;
+	public User readUser(String user_id) throws Exception;
 	
 	// 유저 정보 확인 (기본)
 	public User selectWithPW(String id, String pwd) throws Exception;

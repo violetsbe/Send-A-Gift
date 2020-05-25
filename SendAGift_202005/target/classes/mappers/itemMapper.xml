@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.violet.mapper.ItemMapper">
+  
+  
+	<insert id="insertItem">
+	INSERT INTO item (item_id, cate_id, prov_id, item_title, item_price, item_stock, item_detail) 
+	VALUES (#{item_id}, #{cate_id}, #{prov_id}, #{item_title}, #{item_price}, #{item_stock}, #{item_detail})
+	</insert>
+  
+	<select id="readItem" resultType="com.violet.domain.Item">
+  
+	</select>
+  
+  
+	<update id="updateItem">
+  
+	</update>
+  
+	<delete id="deleteItem">
+	DELETE FROM item WHERE item_id = #{item_id}
+	</delete>
+  
+	<select id="itemListAll" resultType="com.violet.domain.Item"></select>
+  
+ </mapper>
