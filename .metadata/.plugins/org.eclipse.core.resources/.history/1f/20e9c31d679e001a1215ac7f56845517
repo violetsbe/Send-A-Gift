@@ -1,0 +1,15 @@
+package com.violet.persistence;
+
+public interface UserDAO {
+
+	// 유저 등록
+	
+	// 유저 정보 수정
+	
+	// 유저 삭제
+	
+	// 친구 등록
+	
+	// 친구 삭제
+	
+}

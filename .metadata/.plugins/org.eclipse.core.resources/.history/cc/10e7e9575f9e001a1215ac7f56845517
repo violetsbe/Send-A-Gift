@@ -1,0 +1,24 @@
+package com.violet.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.violet.mapper.AplannerMapper;
+import com.violet.persistence.AplannerDAO;
+
+@Service("com.violet.service.AplannerServiceImpl")
+public class AplannerServiceImpl implements AplannerService {
+	
+	@Autowired // 자동주입 어노테이션. Mapper InterFace가 자료형이다.
+	private AplannerMapper aplannerMapper;
+	
+	// Service InterFace의 함수를 명시. 해당 select 작업을 한 후, DB 값을 반환한다.
+	@Override
+	public List<AplannerDAO> selectListService() {
+		return aplannerMapper.selectList();
+	}
+
+	
+}

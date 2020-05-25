@@ -1,0 +1,9 @@
+package com.violet.controller;
+
+import org.junit.runner.RunWith;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {""})
+public class DataSourceTest {
+
+}

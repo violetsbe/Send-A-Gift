@@ -1,0 +1,16 @@
+package com.violet.persistence;
+
+import com.violet.domain.Item;
+
+public interface ItemDAO {
+
+	// 상품 등록(추가)
+	public void insertItem(Item item);
+	
+	// 상품 수정
+	
+	// 상품 삭제
+	
+	
+	
+}

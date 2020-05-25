@@ -1,0 +1,28 @@
+package com.violet.domain;
+
+import java.sql.Date;
+
+public class User {
+
+	private String user_id;
+	private String id;
+	private String pwd;
+	private String user_name;
+	private String email;
+	private String status_message;
+	private String user_pic_id;
+	private String user_filename;
+	private String f_user_id;
+	private String friend_id;
+	
+	private int gender;
+	private int friend_status;
+	private int user_leverl;
+	private Date birth;
+	private Date regdate;
+	
+	
+	
+	
+	
+}

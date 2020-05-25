@@ -1,0 +1,25 @@
+package com.violet.persistence;
+
+import com.violet.domain.User;
+
+public class UserDAOImpl implements UserDAO {
+
+	@Override
+	public void getTime() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void insertUser(User user) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void userInfo(User user) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,26 @@
+package com.violet.domain;
+
+import java.sql.Date;
+
+public class Item {
+	
+	private String item_id;
+	private String cate_id;
+	private String cate_name;
+	private String prov_id;
+	private String prov_name;
+	private String item_title;
+	private String item_detail;
+	private String item_pic_id;
+	private String item_filename;
+	private String tag_id;
+	private String tag_name;
+	private String wish_id;
+	
+	private int item_price;
+	private int item_stock;
+	private int wish_open;
+	private Date item_regdate;
+	private Date wish_regdate;
+
+}

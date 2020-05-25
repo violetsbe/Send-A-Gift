@@ -1,0 +1,13 @@
+package com.violet.service;
+
+import java.util.List;
+
+import com.violet.persistence.AplannerDAO;
+
+
+public interface AplannerService {
+
+	public List<AplannerDAO> selectListService();
+	
+	
+}

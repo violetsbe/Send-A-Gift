@@ -1,0 +1,111 @@
+package com.violet.domain;
+
+import java.sql.Date;
+
+public class User {
+
+	private String user_id;
+	private String id;
+	private String pwd;
+	private String name;
+	private String email;
+	private String status_message;
+	private String user_pic_id;
+	private String user_filename;
+	private String f_user_id;
+	private String friend_id;
+	
+	private int gender;
+	private int friend_status;
+	private Date birth;
+	private Date regdate;
+	
+	
+	public String getUser_id() {
+		return user_id;
+	}
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getPwd() {
+		return pwd;
+	}
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getStatus_message() {
+		return status_message;
+	}
+	public void setStatus_message(String status_message) {
+		this.status_message = status_message;
+	}
+	public String getUser_pic_id() {
+		return user_pic_id;
+	}
+	public void setUser_pic_id(String user_pic_id) {
+		this.user_pic_id = user_pic_id;
+	}
+	public String getUser_filename() {
+		return user_filename;
+	}
+	public void setUser_filename(String user_filename) {
+		this.user_filename = user_filename;
+	}
+	public String getF_user_id() {
+		return f_user_id;
+	}
+	public void setF_user_id(String f_user_id) {
+		this.f_user_id = f_user_id;
+	}
+	public String getFriend_id() {
+		return friend_id;
+	}
+	public void setFriend_id(String friend_id) {
+		this.friend_id = friend_id;
+	}
+	public int getGender() {
+		return gender;
+	}
+	public void setGender(int gender) {
+		this.gender = gender;
+	}
+	public int getFriend_status() {
+		return friend_status;
+	}
+	public void setFriend_status(int friend_status) {
+		this.friend_status = friend_status;
+	}
+	public Date getBirth() {
+		return birth;
+	}
+	public void setBirth(Date birth) {
+		this.birth = birth;
+	}
+	public Date getRegdate() {
+		return regdate;
+	}
+	public void setRegdate(Date regdate) {
+		this.regdate = regdate;
+	}
+	
+	
+	
+}

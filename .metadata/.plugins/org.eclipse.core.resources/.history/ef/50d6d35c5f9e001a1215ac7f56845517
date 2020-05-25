@@ -1,0 +1,13 @@
+package com.violet.mapper;
+
+import java.util.List; // java.util.List일 것
+
+import com.violet.persistence.AplannerDAO;
+
+public interface AplannerMapper {
+
+	// 해당 메소드(함수)는 mapper.xml의 id와 유사한 함수이름이어야 한다.
+	public List<AplannerDAO> selectList();
+	
+	
+}
