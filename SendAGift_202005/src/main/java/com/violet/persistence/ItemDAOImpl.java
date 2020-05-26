@@ -17,34 +17,34 @@ public class ItemDAOImpl implements ItemDAO {
 	
 	private static String namespace = "com.violet.mapper.ItemMapper";
 	
-	
+	// 상품 등록
 	@Override
 	public void insertItem(Item item) throws Exception {
 		session.insert(namespace+".insertItem", item);
 	}
 
+	// 상품 조회
 	@Override
 	public Item readItem(String item_id) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		return session.selectOne(namespace+".readItem", item_id);
 	}
 
+	// 상품 수정
 	@Override
 	public void updateItem(Item item) throws Exception {
-		// TODO Auto-generated method stub
-
+		session.update(namespace+".updateItem", item);
 	}
 
+	// 상품 삭제
 	@Override
 	public void deleteItem(String item_id) throws Exception {
-		// TODO Auto-generated method stub
-
+		session.delete(namespace+".deleteItem", item_id);
 	}
 
+	// 전체 상품 조회
 	@Override
 	public List<Item> itemListAll() throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		return session.selectList(namespace+".itemListAll");
 	}
 
 }

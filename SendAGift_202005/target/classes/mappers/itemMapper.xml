@@ -12,18 +12,32 @@
 	</insert>
   
 	<select id="readItem" resultType="com.violet.domain.Item">
-  
+  	SELECT item_id, c.cate_name, p.prov_name, item_title, item_price, item_stock, item_detail, item_regdate
+	FROM item i, category c, provider p
+	WHERE i.cate_id = c.cate_id
+		AND i.prov_id = p.prov_id
+		AND item_id = #{item_id}
 	</select>
   
   
 	<update id="updateItem">
-  
+  	UPDATE item 
+	SET cate_id = #{cate_id}, prov_id = #{prov_id}, 
+		item_title = #{item_title}, item_price = #{item_price}, 
+		item_stock = #{item_stock}, item_detail = #{item_detail}
+	WHERE item_id = #{item_id}
 	</update>
   
 	<delete id="deleteItem">
 	DELETE FROM item WHERE item_id = #{item_id}
 	</delete>
   
-	<select id="itemListAll" resultType="com.violet.domain.Item"></select>
+	<select id="itemListAll" resultType="com.violet.domain.Item">
+	SELECT item_id, c.cate_name, p.prov_name, item_title, item_price, item_stock, item_detail, item_regdate
+	FROM item i, category c, provider p
+	WHERE i.cate_id = c.cate_id
+		AND i.prov_id = p.prov_id
+	ORDER BY item_id DESC, item_regdate DESC
+	</select>
   
  </mapper>

@@ -13,8 +13,6 @@ public class Item {
 	private String item_detail;
 	private String item_pic_id;
 	private String item_filename;
-	private String tag_id;
-	private String tag_name;
 	
 	private int item_price;
 	private int item_stock;
@@ -74,18 +72,6 @@ public class Item {
 	}
 	public void setItem_filename(String item_filename) {
 		this.item_filename = item_filename;
-	}
-	public String getTag_id() {
-		return tag_id;
-	}
-	public void setTag_id(String tag_id) {
-		this.tag_id = tag_id;
-	}
-	public String getTag_name() {
-		return tag_name;
-	}
-	public void setTag_name(String tag_name) {
-		this.tag_name = tag_name;
 	}
 
 	public int getItem_price() {
