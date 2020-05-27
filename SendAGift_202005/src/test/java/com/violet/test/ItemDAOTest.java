@@ -22,11 +22,10 @@ public class ItemDAOTest {
 	private static org.slf4j.Logger logger = LoggerFactory.getLogger(ItemDAOTest.class);
 	
 	// 상품 등록 테스트
-	@Test
+	//@Test
 	public void testInsertItem() throws Exception {
 		//item_id, cate_id, prov_id, item_title, item_price, item_stock, item_detail
 		Item item = new Item();
-		item.setItem_id("ITEM0003");
 		item.setCate_id("CA0001");
 		item.setProv_id("PR0002");
 		item.setItem_title("헤어핀");
@@ -41,16 +40,16 @@ public class ItemDAOTest {
 	@Test
 	public void testReadItem() throws Exception {
 		
-		logger.info(dao.readItem("ITEM0001").toString());
+		logger.info(dao.readItem("ITEM-00001").toString());
 		
 	}
 	
 	// 상품 수정
-	@Test
+	//@Test
 	public void testUpdateItem() throws Exception {
 		// cate_id, prov_id, item_title, item_price, item_stock, item_detail
 		Item item = new Item();
-		item.setItem_id("ITEM0002");
+		item.setItem_id("ITEM-00002");
 		item.setCate_id("CA0002");
 		item.setProv_id("PR0002");
 		item.setItem_title("별 모양 목걸이");
@@ -62,7 +61,7 @@ public class ItemDAOTest {
 	}
 	
 	// 상품 삭제
-	@Test
+	//	@Test
 	public void testDeleteItem() throws Exception {
 		dao.deleteItem("ITEM0003");
 	}

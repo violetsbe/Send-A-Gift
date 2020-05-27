@@ -8,7 +8,7 @@
   
 	<insert id="insertItem">
 	INSERT INTO item (item_id, cate_id, prov_id, item_title, item_price, item_stock, item_detail) 
-	VALUES (#{item_id}, #{cate_id}, #{prov_id}, #{item_title}, #{item_price}, #{item_stock}, #{item_detail})
+	VALUES ((SELECT CONCAT('ITEM', '-', LPAD(IFNULL(SUBSTR(MAX(item_id), 5), 0)+1, 5, 0)) AS new_id FROM item i), #{cate_id}, #{prov_id}, #{item_title}, #{item_price}, #{item_stock}, #{item_detail})
 	</insert>
   
 	<select id="readItem" resultType="com.violet.domain.Item">
@@ -18,7 +18,6 @@
 		AND i.prov_id = p.prov_id
 		AND item_id = #{item_id}
 	</select>
-  
   
 	<update id="updateItem">
   	UPDATE item 

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.violet.mapper.SendMapper">
+
+	<!-- 선물하기 -->
+	<insert id="insertSend">
+	INSERT INTO send (send_id, giver, taker, item_id, amount, order_date, send_message, checked)
+	VALUES ((SELECT CONCAT('S', '-', LPAD(IFNULL(SUBSTR(MAX(send_id), 1), 0)+1, 7, 0)) AS new_id FROM send s), 
+			#{giver}, #{taker}, #{item_id}, #{amount}, #{order_date}, #{send_message}, 0)
+	</insert>
+	
+	<!-- 선물한 내역 상세 확인 -->
+	<select id="readSend" resultType="com.violet.domain.Send">
+	SELECT send_id, giver, taker, item_id, amount, order_date, send_message, checked_date, 
+	c.cate_name, p.prov_name, i.item_title
+	FROM send s, item i, category c, provider p
+	WHERE s.item_id = i.item_id
+		AND i.cate_id = c.cate_id
+		AND i.prov_id = p.prov_id
+		AND send_id = #{send_id}
+		AND giver = #{user_id}
+	</select>
+	
+	<!-- 받은 선물 상세 확인 -->
+	<select id="readRecieve" resultType="com.violet.domain.Send">
+	SELECT send_id, giver, taker, item_id, amount, order_date, send_message, checked_date, 
+	c.cate_name, p.prov_name, i.item_title
+	FROM send s, item i, category c, provider p
+	WHERE s.item_id = i.item_id
+		AND i.cate_id = c.cate_id
+		AND i.prov_id = p.prov_id
+		AND send_id = #{send_id}
+		AND taker = #{user_id}
+	</select>
+	
+	<!-- 선물한 내역 전체 조회 -->
+	<select id="sendListAll" resultType="com.violet.domain.Send">
+	SELECT send_id, giver, taker, item_id, amount, order_date, send_message, checked_date, 
+	c.cate_name, p.prov_name, i.item_title
+	FROM send s, item i, category c, provider p
+	WHERE s.item_id = i.item_id
+		AND i.cate_id = c.cate_id
+		AND i.prov_id = p.prov_id
+		AND giver = #{user_id}
+	</select>
+	
+
+	
+	<!-- 받은 선물 전체 조회 -->
+	<select id="recieveListAll" resultType="com.violet.domain.Send">
+	SELECT send_id, giver, taker, item_id, amount, order_date, send_message, checked_date, 
+	c.cate_name, p.prov_name, i.item_title
+	FROM send s, item i, category c, provider p
+	WHERE s.item_id = i.item_id
+		AND i.cate_id = c.cate_id
+		AND i.prov_id = p.prov_id
+		AND taker = #{user_id}
+	</select>
+	
+	
+	<!-- 선물 수신여부 수정 -->
+	<update id="updateChecked">
+	UPDATE send
+	SET checked = 1, checked_date = now()
+	WHERE send_id = #{send_id}
+	</update>
+	
+
+</mapper>

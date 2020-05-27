@@ -29,15 +29,14 @@ public class UserDAOTest {
 	public void testInsertUser() throws Exception {
 		//user_id, id, pwd, user_name, birth, gender, email, user_level, status_message
 		User user = new User();
-		user.setUser_id("U0001");
-		user.setId("user001");
+		user.setId("user002");
 		user.setPwd("usertest");
 		user.setUser_name("TEST");
-		user.setBirth(java.sql.Date.valueOf("1990-08-31"));
+		user.setBirth(java.sql.Date.valueOf("1990-01-01"));
 		user.setGender(0);
-		user.setEmail("test@test.com");
+		user.setEmail("test2@test.com");
 		user.setUser_level(1);
-		user.setStatus_message("상태메세지입니다.");
+		user.setStatus_message("상태메세지입니다.22");
 		
 		dao.insertUser(user);
 		

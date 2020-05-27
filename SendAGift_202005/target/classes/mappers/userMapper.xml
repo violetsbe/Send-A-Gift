@@ -12,7 +12,7 @@
 	
 	<insert id="insertUser">
 	INSERT INTO user (user_id, id, pwd, user_name, birth, gender, email, user_level, status_message) VALUES
-	(#{user_id}, #{id}, #{pwd}, #{user_name}, #{birth}, #{gender}, #{email}, #{user_level}, #{status_message})
+	((SELECT CONCAT('U', LPAD(IFNULL(SUBSTR(MAX(user_id), 1), 0)+1, 6, 0)) AS new_id FROM user u), #{id}, #{pwd}, #{user_name}, #{birth}, #{gender}, #{email}, #{user_level}, #{status_message})
 	</insert>
 	
 	<select id="readUser" resultType="com.violet.domain.User">

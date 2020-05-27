@@ -2,7 +2,7 @@ package com.violet.domain;
 
 import java.sql.Date;
 
-public class Wishlist {
+public class WishList {
 	
 	public String wish_id;
 	public String user_id;

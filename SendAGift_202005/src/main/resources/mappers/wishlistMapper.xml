@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.violet.mapper.WishListMapper">
+	
+	<!-- 위시리스트 추가 -->
+	<insert id="insertWish">
+	INSERT INTO wishlist (wish_id, user_id, item_id, wish_regdate, wish_open)
+	VALUES ((SELECT CONCAT('WI', '-', LPAD(IFNULL(SUBSTR(MAX(wish_id), 3), 0)+1, 6, 0)) AS new_id FROM wishlist w), 
+			#{user_id}, #{item_id}, #{wish_regdate}, #{wish_oepn})
+	
+	</insert>
+
+	<!-- 본인이 조회하는 전체 위시리스트 -->
+	<select id="wishListAll" resultType="com.violet.domain.WishList">
+	SELECT wish_id, user_id, item_id, wish_regdate, wish_open, 
+		c.cate_name, p.prov_name, i.item_title, i.item_price
+	FROM wishlist w, category c, provider p, item i
+	WHERE w.item_id = i.item_id
+		AND i.cate_id = c.cate_id
+		AND i.prov_id = p.prov_id
+		AND user_id = #{user_id} 
+	</select>
+
+	<!-- 다른 사람이 조회하는 위시리스트 -->
+	<select id="wishListOpenedAll" resultType="com.violet.domain.WishList">
+	SELECT wish_id, user_id, item_id, wish_regdate, wish_open, 
+		c.cate_name, p.prov_name, i.item_title, i.item_price
+	FROM wishlist w, category c, provider p, item i
+	WHERE w.item_id = i.item_id
+		AND i.cate_id = c.cate_id
+		AND i.prov_id = p.prov_id
+		AND user_id = #{user_id}
+		AND wish_open = 1;
+	</select>
+	
+	<!-- 위시리스트 삭제 -->
+	<delete id="deleteWish">
+	DELETE FROM wishlist WHERE wish_id = #{wish_id}
+	</delete>
+	
+	<!-- 위시 공개 여부 수정 -->
+	<update id="updateWishOpen">
+	UPDATE wishlist 
+	SET wish_open = #{wish_open}
+	WHERE wish_id = #{wish_id}
+	</update>
+	
+	
+</mapper>

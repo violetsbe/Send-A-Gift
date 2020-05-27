@@ -24,6 +24,8 @@
 		<property name="username" value="root" />
 		<property name="password" value="1515ab*" />
 	</bean>
+
+	
 	
 	<!-- 스프링 프레임워크가 관리할 클래스 정보 설정 -->
 	<!-- SpringJDBC 객체 등록 -->
@@ -51,9 +53,12 @@
         <!-- value : Project에서의 Mapper Package -->
 		<property name="basePackage" value="com.violet.mapper"/> 
 	</bean>
+	
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
 		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
 	
+	
+
 	
 </beans>

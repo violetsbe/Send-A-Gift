@@ -14,7 +14,7 @@ import com.violet.domain.User;
 public class UserDAOImpl implements UserDAO {
 
 	@Inject
-	private SqlSession sqlSession;
+	private SqlSession session;
 	
 	//userMapper.xml
 	private static final String namespace = "com.violet.mapper.UserMapper";
@@ -22,18 +22,18 @@ public class UserDAOImpl implements UserDAO {
 	
 	@Override
 	public String getTime() {
-		return sqlSession.selectOne(namespace+".getTime");
+		return session.selectOne(namespace+".getTime");
 	}
 
 	@Override
 	public void insertUser(User user) {
-		sqlSession.insert(namespace+".insertUser", user);
+		session.insert(namespace+".insertUser", user);
 	}
 
 	@Override
 	public User readUser(String user_id) throws Exception {
 		
-		return sqlSession.selectOne(namespace+".selectMember", user_id);
+		return session.selectOne(namespace+".selectMember", user_id);
 	}
 
 	@Override
@@ -44,7 +44,7 @@ public class UserDAOImpl implements UserDAO {
 		paramMap.put("id", id);
 		paramMap.put("pwd", pwd);
 		
-		return sqlSession.selectOne(namespace+".selectWithPW", paramMap);
+		return session.selectOne(namespace+".selectWithPW", paramMap);
 	}
 
 

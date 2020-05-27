@@ -15,7 +15,9 @@ public class ItemDAOImpl implements ItemDAO {
 	@Inject
 	private SqlSession session;
 	
+	//itemMapper.xml
 	private static String namespace = "com.violet.mapper.ItemMapper";
+	
 	
 	// 상품 등록
 	@Override

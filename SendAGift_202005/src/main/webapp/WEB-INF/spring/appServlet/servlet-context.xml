@@ -21,7 +21,17 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.violet.test" />
+	<context:component-scan base-package="com.violet.controller" />
 	
+	<!-- 파일 업로드 -->
+	<beans:bean id="mutipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    	<beans:property name="defaultEncoding" value="utf-8"></beans:property>
+		<!-- 한 번의 Request로 전달될 수 있는 최대 크기 설정 : 10 MB -->
+    	<beans:property name="maxUploadSize" value="104857560"></beans:property>
+    	<!--파일 하나 최대 크기 설정 : 2MB  -->
+    	<beans:property name="maxUploadSizePerFile" value="2097152"></beans:property>
+    	<beans:property name="uploadTempDir" value="file:/C:/upload/tmp"></beans:property>
+    	<beans:property name="maxInMemorySize" value="10485756"></beans:property>
+	</beans:bean>
 	
 </beans:beans>
