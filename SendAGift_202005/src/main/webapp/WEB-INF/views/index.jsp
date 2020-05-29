@@ -1,503 +1,241 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
-<%@ page language="java" contentType="text/HTML;charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%
 request.setCharacterEncoding("UTF-8");
 %>
 
 
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Yoga Studio Template">
-    <meta name="keywords" content="Yoga, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Violet | Template</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap"
-        rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="resources/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="resources/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="resources/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="resources/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="resources/css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="resources/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="resources/css/style.css" type="text/css">
+  <title>Shop Homepage - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="/resources/css/shop-homepage.css" rel="stylesheet">
+
+   <!-- Bootstrap core JavaScript -->
+  <script src="/resources/vendor/jquery/jquery.min.js"></script>
+  <script src="/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
 </head>
 
 <body>
-    <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">초콜릿톡 선물하기</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/index">홈
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/common/best">베스트</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/common/brand">브랜드</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/common/giftbox">선물함</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">/
+            </a>
+          </li>
+          <li class="nav-item">
+          	<a class="nav-link" href="/register/registerForm">가입하기</a>
+          </li>
+          <li class="nav-item">
+          	<a class="nav-link" href="/login/loginForm">로그인</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    
-    <!-- Search model -->
-	<div class="search-model">
-		<div class="h-100 d-flex align-items-center justify-content-center">
-			<div class="search-close-switch">+</div>
-			<form class="search-model-form">
-				<input type="text" id="search-input" placeholder="Search here.....">
-			</form>
-		</div>
-	</div>
-	<!-- Search model end -->
+  </nav>
 
-    <!-- Header Section Begin -->
-    <header class="header-section">
-        <div class="container-fluid">
-            <div class="inner-header">
-                <div class="logo">
-                    <a href="./index.html"><img src="resources/img/logo.png" alt=""></a>
-                </div>
-                <div class="header-right">
-                    <img src="resources/img/icons/search.png" alt="" class="search-trigger">
-                    <img src="resources/img/icons/man.png" alt="">
-                    <a href="#">
-                        <img src="resources/img/icons/bag.png" alt="">
-                        <span>2</span>
-                    </a>
-                </div>
-                <div class="user-access">
-                    <a href="#">회원가입</a>
-                    <a href="#" class="in">로그인</a>
-                </div>
-                <nav class="main-menu mobile-menu">
-                    <ul>
-                        <li><a class="active" href="./index.html">홈</a></li>
-                        <li><a href="./categories.html">추천</a>
-                            <ul class="sub-menu">
-                                <li><a href="product-page.html">인기순</a></li>
-                                <li><a href="shopping-cart.html">가격대별</a></li>
-                                <li><a href="check-out.html">Check out</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="./product-page.html">베스트</a></li>
-                        <li><a href="./check-out.html">브랜드</a></li>
-                        <li><a href="./contact.html">선물함</a></li>
-                    </ul>
-                </nav>
-            </div>
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-3">
+
+        <h3 class="my-4">친구 목록</h3>
+        <div class="list-group">
+          <a href="#" class="list-group-item">친구 1</a>
+          <a href="#" class="list-group-item">친구 2</a>
+          <a href="#" class="list-group-item">친구 3</a>
         </div>
-    </header>
-    <!-- Header Info Begin -->
-    <div class="header-info">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="header-item">
-                        <img src="resources/img/icons/delivery.png" alt="">
-                        <p>배송지를 몰라도 선물할 수 있어요.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 text-left text-lg-center">
-                    <div class="header-item">
-                        <img src="resources/img/icons/voucher.png" alt="">
-                        <p>나에게는 물론 친구에게도 선물!</p>
-                    </div>
-                </div>
-                <div class="col-md-4 text-left text-xl-right">
-                    <div class="header-item">
-                    <img src="resources/img/icons/sales.png" alt="">
-                    <p>다양한 이벤트와 할인 혜택이 기다립니다.</p>
-                </div>
-                </div>
+
+      </div>
+      <!-- /.col-lg-3 -->
+
+      <div class="col-lg-9">
+
+        <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
             </div>
+            <div class="carousel-item">
+              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Item One</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Item Two</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Item Three</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Item Four</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Item Five</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Item Six</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.row -->
+
+      </div>
+      <!-- /.col-lg-9 -->
+
     </div>
-    <!-- Header Info End -->
-    <!-- Header End -->
+    <!-- /.row -->
 
-    <!-- Hero Slider Begin -->
-    <section class="hero-slider">
-        <div class="hero-items owl-carousel">
-            <div class="single-slider-item set-bg" data-setbg="resources/img/slider-1.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h1>2020</h1>
-                            <h2>BEST ITEM</h2>
-                            <a href="#" class="primary-btn">See More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="single-slider-item set-bg" data-setbg="resources/img/slider-2.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h1>2020</h1>
-                            <h2>BEST ITEM</h2>
-                            <a href="#" class="primary-btn">See More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="single-slider-item set-bg" data-setbg="resources/img/slider-3.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h1>2020</h1>
-                            <h2>BEST ITEM</h2>
-                            <a href="#" class="primary-btn">See More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Hero Slider End -->
+  </div>
+  <!-- /.container -->
 
-    <!-- Features Section Begin -->
-    <section class="features-section spad">
-        <div class="features-ads">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="single-features-ads first">
-                            <img src="resources/img/icons/f-delivery.png" alt="">
-                            <h4>안심하고 선물하세요</h4>
-                            <p>주소를 몰라도 선물 OK! <br/> 선물을 받은 사람이 배송지를 입력할 수 있어요.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="single-features-ads second">
-                            <img src="resources/img/icons/coin.png" alt="">
-                            <h4>100% 정품 보증</h4>
-                            <p>입점사 직배송으로 정품을 보증합니다.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="single-features-ads">
-                            <img src="resources/img/icons/chat.png" alt="">
-                            <h4>다양한 할인 혜택</h4>
-                            <p>365일 풍성한 할인 혜택과 이벤트가 기다립니다.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Features Box -->
-        <div class="features-box">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="single-box-item first-box">
-                                    <img src="resources/img/f-box-10.jpg" alt="">
-                                    <div class="box-text">
-                                        <span class="trend-year">2020</span>
-                                        <h2>생일 선물</h2>
-                                        <span class="trend-alert">Happy Birthday!</span>
-                                        <a href="#" class="primary-btn">See More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="single-box-item second-box">
-                                    <img src="resources/img/f-box-6.jpg" alt="">
-                                    <div class="box-text">
-                                        <span class="trend-year">2만원 이하의</span>
-                                        <h2>가벼운 선물</h2>
-                                        <span class="trend-alert"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="single-box-item large-box">
-                            <img src="resources/img/f-box-9.jpg" alt="">
-                            <div class="box-text">
-                                <span class="trend-year">2020 Trend</span>
-                                <h2>스몰럭셔리</h2>
-                                <div class="trend-alert">Trend Allert</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Features Section End -->
-
-    <!-- Latest Product Begin -->
-    <section class="latest-products spad">
-        <div class="container">
-            <div class="product-filter">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <div class="section-title">
-                            <h2>Latest Products</h2>
-                        </div>
-                        <ul class="product-controls">
-                            <li data-filter="*">All</li>
-                            <li data-filter=".dresses">Dresses</li>
-                            <li data-filter=".bags">Bags</li>
-                            <li data-filter=".shoes">Shoes</li>
-                            <li data-filter=".accesories">Accesories</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row" id="product-list">
-                <div class="col-lg-3 col-sm-6 mix all dresses bags">
-                    <div class="single-product-item">
-                        <figure>
-                            <a href="#"><img src="resources/img/products/img-1.jpg" alt=""></a>
-                            <div class="p-status">new</div>
-                        </figure>
-                        <div class="product-text">
-                            <h6>Green Dress with details</h6>
-                            <p>$22.90</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 mix all dresses bags">
-                    <div class="single-product-item">
-                        <figure>
-                            <a href="#"><img src="resources/img/products/img-2.jpg" alt=""></a>
-                            <div class="p-status sale">sale</div>
-                        </figure>
-                        <div class="product-text">
-                            <h6>Yellow Maxi Dress</h6>
-                            <p>$25.90</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 mix all shoes accesories">
-                    <div class="single-product-item">
-                        <figure>
-                            <a href="#"><img src="resources/img/products/img-3.jpg" alt=""></a>
-                            <div class="p-status">new</div>
-                        </figure>
-                        <div class="product-text">
-                            <h6>One piece bodysuit</h6>
-                            <p>$19.90</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 mix all shoes accesories">
-                    <div class="single-product-item">
-                        <figure>
-                            <a href="#"><img src="resources/img/products/img-4.jpg" alt=""></a>
-                            <div class="p-status popular">popular</div>
-                        </figure>
-                        <div class="product-text">
-                            <h6>Blue Dress with details</h6>
-                            <p>$35.50</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 mix all dresses shoes">
-                    <div class="single-product-item">
-                        <figure>
-                            <a href="#"><img src="resources/img/products/img-5.jpg" alt=""></a>
-                            <div class="p-status">new</div>
-                        </figure>
-                        <div class="product-text">
-                            <h6>Green Dress with details</h6>
-                            <p>$22.90</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 mix all accesories bags">
-                    <div class="single-product-item">
-                        <figure>
-                            <a href="#"><img src="resources/img/products/img-6.jpg" alt=""></a>
-                            <div class="p-status sale">sale</div>
-                        </figure>
-                        <div class="product-text">
-                            <h6>Yellow Maxi Dress</h6>
-                            <p>$25.90</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 mix all dresses bags">
-                    <div class="single-product-item">
-                        <figure>
-                            <a href="#"><img src="resources/img/products/img-7.jpg" alt=""></a>
-                        </figure>
-                        <div class="product-text">
-                            <h6>One piece bodysuit</h6>
-                            <p>$19.90</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 mix all accesories bags">
-                    <div class="single-product-item">
-                        <figure>
-                            <a href="#"><img src="resources/img/products/img-8.jpg" alt=""></a>
-                            <div class="p-status popular">popular</div>
-                        </figure>
-                        <div class="product-text">
-                            <h6>Blue Dress with details</h6>
-                            <p>$35.50</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Latest Product End -->
-
-    <!-- Lookbok Section Begin -->
-    <section class="lookbok-section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-4 offset-lg-1">
-                    <div class="lookbok-left">
-                        <div class="section-title">
-                            <h2>2019 <br />#lookbook</h2>
-                        </div>
-                        <p>Fusce urna quam, euismod sit amet mollis quis, vestibulum quis velit. Vestibulum malesuada
-                            aliquet libero viverra cursus. Aliquam erat volutpat. Morbi id dictum quam, ut commodo
-                            lorem. In at nisi nec arcu porttitor aliquet vitae at dui. Sed sollicitudin nulla non leo
-                            viverra scelerisque. Phasellus facilisis lobortis metus, sit amet viverra lectus finibus ac.
-                            Aenean non felis dapibus, placerat libero auctor, ornare ante. Morbi quis ex eleifend,
-                            sodales nulla vitae, scelerisque ante. Nunc id vulputate dui. Suspendisse consectetur rutrum
-                            metus nec scelerisque. s</p>
-                        <a href="#" class="primary-btn look-btn">See More</a>
-                    </div>
-                </div>
-                <div class="col-lg-5 offset-lg-1">
-                    <div class="lookbok-pic">
-                        <img src="resources/img/lookbok.jpg" alt="">
-                        <div class="pic-text">fashion</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Lookbok Section End -->
-
-    <!-- Logo Section Begin -->
-    <div class="logo-section spad">
-        <div class="logo-items owl-carousel">
-            <div class="logo-item">
-                <img src="resources/img/logos/logo-1.png" alt="">
-            </div>
-            <div class="logo-item">
-                <img src="resources/img/logos/logo-2.png" alt="">
-            </div>
-            <div class="logo-item">
-                <img src="resources/img/logos/logo-3.png" alt="">
-            </div>
-            <div class="logo-item">
-                <img src="resources/img/logos/logo-4.png" alt="">
-            </div>
-            <div class="logo-item">
-                <img src="resources/img/logos/logo-5.png" alt="">
-            </div>
-        </div>
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; ChocolateTalk Gift 2020</p>
     </div>
-    <!-- Logo Section End -->
-
-    <!-- Footer Section Begin -->
-    <footer class="footer-section spad">
-        <div class="container">
-            <div class="newslatter-form">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <form action="#">
-                            <input type="text" placeholder="Your email address">
-                            <button type="submit">Subscribe to our newsletter</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-widget">
-                <div class="row">
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="single-footer-widget">
-                            <h4>About us</h4>
-                            <ul>
-                                <li>About Us</li>
-                                <li>Community</li>
-                                <li>Jobs</li>
-                                <li>Shipping</li>
-                                <li>Contact Us</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="single-footer-widget">
-                            <h4>Customer Care</h4>
-                            <ul>
-                                <li>Search</li>
-                                <li>Privacy Policy</li>
-                                <li>2019 Lookbook</li>
-                                <li>Shipping & Delivery</li>
-                                <li>Gallery</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="single-footer-widget">
-                            <h4>Our Services</h4>
-                            <ul>
-                                <li>Free Shipping</li>
-                                <li>Free Returnes</li>
-                                <li>Our Franchising</li>
-                                <li>Terms and conditions</li>
-                                <li>Privacy Policy</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="single-footer-widget">
-                            <h4>Information</h4>
-                            <ul>
-                                <li>Payment methods</li>
-                                <li>Times and shipping costs</li>
-                                <li>Product Returns</li>
-                                <li>Shipping methods</li>
-                                <li>Conformity of the products</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="social-links-warp">
-			<div class="container">
-				<div class="social-links">
-					<a href="" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
-					<a href="" class="pinterest"><i class="fa fa-pinterest"></i><span>pinterest</span></a>
-					<a href="" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
-					<a href="" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
-					<a href="" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
-					<a href="" class="tumblr"><i class="fa fa-tumblr-square"></i><span>tumblr</span></a>
-				</div>
-			</div>
-
-<div class="container text-center pt-5">
-                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-            </div>
+    <!-- /.container -->
+  </footer>
 
 
-		</div>
-    </footer>
-    <!-- Footer Section End -->
 
-    <!-- Js Plugins -->
-    <script src="resources/js/jquery-3.3.1.min.js"></script>
-    <script src="resources/js/bootstrap.min.js"></script>
-    <script src="resources/js/jquery.magnific-popup.min.js"></script>
-    <script src="resources/js/jquery.slicknav.js"></script>
-    <script src="resources/js/owl.carousel.min.js"></script>
-    <script src="resources/js/jquery.nice-select.min.js"></script>
-    <script src="resources/js/mixitup.min.js"></script>
-    <script src="resources/js/main.js"></script>
 </body>
 
 </html>

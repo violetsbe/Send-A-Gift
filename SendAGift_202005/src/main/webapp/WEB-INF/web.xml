@@ -49,5 +49,14 @@
 	    <filter-name>encoding-filter</filter-name>
 	    <url-pattern>/*</url-pattern>
 	</filter-mapping>
+	
+	<!-- trimDirectiveWhitespaces  -->
+	<jsp-config>
+	  <jsp-property-group>
+	    <url-pattern>*.jsp</url-pattern>
+	    <trim-directive-whitespaces>true</trim-directive-whitespaces>
+	  </jsp-property-group>
+	</jsp-config>
+
 
 </web-app>
