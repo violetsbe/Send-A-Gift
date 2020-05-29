@@ -65,22 +65,22 @@ request.setCharacterEncoding("UTF-8");
                     </a>
                 </div>
                 <div class="user-access">
-                    <a href="#">Register</a>
-                    <a href="#" class="in">Sign in</a>
+                    <a href="#">회원가입</a>
+                    <a href="#" class="in">로그인</a>
                 </div>
                 <nav class="main-menu mobile-menu">
                     <ul>
-                        <li><a class="active" href="./index.html">Home</a></li>
-                        <li><a href="./categories.html">Shop</a>
+                        <li><a class="active" href="./index.html">홈</a></li>
+                        <li><a href="./categories.html">추천</a>
                             <ul class="sub-menu">
-                                <li><a href="product-page.html">Product Page</a></li>
-                                <li><a href="shopping-cart.html">Shopping Card</a></li>
+                                <li><a href="product-page.html">인기순</a></li>
+                                <li><a href="shopping-cart.html">가격대별</a></li>
                                 <li><a href="check-out.html">Check out</a></li>
                             </ul>
                         </li>
-                        <li><a href="./product-page.html">About</a></li>
-                        <li><a href="./check-out.html">Blog</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="./product-page.html">베스트</a></li>
+                        <li><a href="./check-out.html">브랜드</a></li>
+                        <li><a href="./contact.html">선물함</a></li>
                     </ul>
                 </nav>
             </div>
@@ -93,19 +93,19 @@ request.setCharacterEncoding("UTF-8");
                 <div class="col-md-4">
                     <div class="header-item">
                         <img src="resources/img/icons/delivery.png" alt="">
-                        <p>Free shipping on orders over $30 in USA</p>
+                        <p>배송지를 몰라도 선물할 수 있어요.</p>
                     </div>
                 </div>
                 <div class="col-md-4 text-left text-lg-center">
                     <div class="header-item">
                         <img src="resources/img/icons/voucher.png" alt="">
-                        <p>20% Student Discount</p>
+                        <p>나에게는 물론 친구에게도 선물!</p>
                     </div>
                 </div>
                 <div class="col-md-4 text-left text-xl-right">
                     <div class="header-item">
                     <img src="resources/img/icons/sales.png" alt="">
-                    <p>30% off on dresses. Use code: 30OFF</p>
+                    <p>다양한 이벤트와 할인 혜택이 기다립니다.</p>
                 </div>
                 </div>
             </div>
@@ -121,8 +121,8 @@ request.setCharacterEncoding("UTF-8");
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h1>2019</h1>
-                            <h2>Lookbook.</h2>
+                            <h1>2020</h1>
+                            <h2>BEST ITEM</h2>
                             <a href="#" class="primary-btn">See More</a>
                         </div>
                     </div>
@@ -132,8 +132,8 @@ request.setCharacterEncoding("UTF-8");
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h1>2019</h1>
-                            <h2>Lookbook.</h2>
+                            <h1>2020</h1>
+                            <h2>BEST ITEM</h2>
                             <a href="#" class="primary-btn">See More</a>
                         </div>
                     </div>
@@ -143,8 +143,8 @@ request.setCharacterEncoding("UTF-8");
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h1>2019</h1>
-                            <h2>Lookbook.</h2>
+                            <h1>2020</h1>
+                            <h2>BEST ITEM</h2>
                             <a href="#" class="primary-btn">See More</a>
                         </div>
                     </div>
@@ -162,25 +162,22 @@ request.setCharacterEncoding("UTF-8");
                     <div class="col-lg-4">
                         <div class="single-features-ads first">
                             <img src="resources/img/icons/f-delivery.png" alt="">
-                            <h4>Free shipping</h4>
-                            <p>Fusce urna quam, euismod sit amet mollis quis, vestibulum quis velit. Vesti bulum mal
-                                esuada aliquet libero viverra cursus. </p>
+                            <h4>안심하고 선물하세요</h4>
+                            <p>주소를 몰라도 선물 OK! <br/> 선물을 받은 사람이 배송지를 입력할 수 있어요.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="single-features-ads second">
                             <img src="resources/img/icons/coin.png" alt="">
-                            <h4>100% Money back </h4>
-                            <p>Urna quam, euismod sit amet mollis quis, vestibulum quis velit. Vesti bulum mal esuada
-                                aliquet libero viverra cursus. </p>
+                            <h4>100% 정품 보증</h4>
+                            <p>입점사 직배송으로 정품을 보증합니다.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="single-features-ads">
                             <img src="resources/img/icons/chat.png" alt="">
-                            <h4>Online support 24/7</h4>
-                            <p>Urna quam, euismod sit amet mollis quis, vestibulum quis velit. Vesti bulum mal esuada
-                                aliquet libero viverra cursus. </p>
+                            <h4>다양한 할인 혜택</h4>
+                            <p>365일 풍성한 할인 혜택과 이벤트가 기다립니다.</p>
                         </div>
                     </div>
                 </div>
@@ -194,22 +191,22 @@ request.setCharacterEncoding("UTF-8");
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="single-box-item first-box">
-                                    <img src="resources/img/f-box-1.jpg" alt="">
+                                    <img src="resources/img/f-box-10.jpg" alt="">
                                     <div class="box-text">
-                                        <span class="trend-year">2019 Party</span>
-                                        <h2>Jewelry</h2>
-                                        <span class="trend-alert">Trend Allert</span>
+                                        <span class="trend-year">2020</span>
+                                        <h2>생일 선물</h2>
+                                        <span class="trend-alert">Happy Birthday!</span>
                                         <a href="#" class="primary-btn">See More</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-12">
                                 <div class="single-box-item second-box">
-                                    <img src="resources/img/f-box-2.jpg" alt="">
+                                    <img src="resources/img/f-box-6.jpg" alt="">
                                     <div class="box-text">
-                                        <span class="trend-year">2019 Trend</span>
-                                        <h2>Footwear</h2>
-                                        <span class="trend-alert">Bold & Black</span>
+                                        <span class="trend-year">2만원 이하의</span>
+                                        <h2>가벼운 선물</h2>
+                                        <span class="trend-alert"></span>
                                     </div>
                                 </div>
                             </div>
@@ -217,10 +214,10 @@ request.setCharacterEncoding("UTF-8");
                     </div>
                     <div class="col-lg-6">
                         <div class="single-box-item large-box">
-                            <img src="resources/img/f-box-3.jpg" alt="">
+                            <img src="resources/img/f-box-9.jpg" alt="">
                             <div class="box-text">
-                                <span class="trend-year">2019 Party</span>
-                                <h2>Collection</h2>
+                                <span class="trend-year">2020 Trend</span>
+                                <h2>스몰럭셔리</h2>
                                 <div class="trend-alert">Trend Allert</div>
                             </div>
                         </div>

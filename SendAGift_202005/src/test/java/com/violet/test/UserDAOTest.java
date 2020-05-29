@@ -25,18 +25,18 @@ public class UserDAOTest {
 	}
 	
 	// 유저 등록 테스트
-	//@Test
+	@Test
 	public void testInsertUser() throws Exception {
 		//user_id, id, pwd, user_name, birth, gender, email, user_level, status_message
 		User user = new User();
-		user.setId("user002");
+		user.setId("user003");
 		user.setPwd("usertest");
 		user.setUser_name("TEST");
 		user.setBirth(java.sql.Date.valueOf("1990-01-01"));
 		user.setGender(0);
-		user.setEmail("test2@test.com");
+		user.setEmail("test333@test.com");
 		user.setUser_level(1);
-		user.setStatus_message("상태메세지입니다.22");
+		user.setStatus_message("상태메세지입니다.333");
 		
 		dao.insertUser(user);
 		
