@@ -63,7 +63,7 @@ request.setCharacterEncoding("UTF-8");
 
 </head>
 
-<body>
+<body onload="document.loginform.id.focus();">
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -113,9 +113,9 @@ request.setCharacterEncoding("UTF-8");
 	    	<div class="card bg-light">
 				<article class="card-body mx-auto" style="max-width: 400px;">
 					<br/>
-					<h4 class="card-title mt-3 text-center">초콜릿톡 로그인</h4>
+					<h4 class="card-title mt-3 text-center">초콜릿톡 선물하기 로그인</h4>
 					<br/>
-					<form>
+					<form name="loginform" action="/login" method="post">
 					<div class="form-group input-group">
 						<div class="input-group-prepend">
 						    <span class="input-group-text"> <i class="fas fa-id-card"></i> </span>
@@ -128,8 +128,23 @@ request.setCharacterEncoding("UTF-8");
 				    	<div class="input-group-prepend">
 						    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
 						</div>
-				        <input name="pwd" id="pwd1" class="form-control" placeholder="비밀번호" type="password">
-				    </div> <!-- form-group// -->                                   
+				        <input name="pwd" id="pwd" class="form-control" placeholder="비밀번호" type="password">
+				    </div> <!-- form-group// -->
+				
+				    <input type="hidden" name="${_csrf.parameterName}"
+					value="${_csrf.token}" />
+					
+					
+					<c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">
+					    <font color="red">
+					        <p>로그인에 실패하였습니다. <br/>
+					            ${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}</p>
+					        <c:remove var="SPRING_SECURITY_LAST_EXCEPTION" scope="session"/>
+					    </font>
+					</c:if>
+
+
+	                                       
 				    <div class="form-group">
 				        <button type="submit" class="btn btn-primary btn-block">로그인</button>
 				    </div> <!-- form-group// -->
@@ -143,7 +158,7 @@ request.setCharacterEncoding("UTF-8");
 					</p>
 			        <div class="text-center social-btn">
 						<a href="#"><img width="250px" src="/resources/img/naver_Green.PNG"></a>
-			        </div>                                                                    
+			        </div>                                                                   
 				</form>
 				<br/>
 					<p class="text-center text-muted small">아직 회원이 아니신가요? <a href="/register/registerForm">회원가입</a></p>

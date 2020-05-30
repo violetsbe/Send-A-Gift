@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ page import="org.springframework.security.core.context.SecurityContextHolder" %>
+<%@ page import="org.springframework.security.core.Authentication" %>
+
+
 <%
 request.setCharacterEncoding("UTF-8");
 %>
@@ -63,7 +68,20 @@ request.setCharacterEncoding("UTF-8");
           	<a class="nav-link" href="/register/registerForm">가입하기</a>
           </li>
           <li class="nav-item">
-          	<a class="nav-link" href="/login/loginForm">로그인</a>
+          
+         	<!-- 로그인 -->
+			<sec:authorize access="isAnonymous()">
+				<a class="nav-link" href='<c:url value="/login/loginForm"/>'>로그인</a>
+			</sec:authorize>
+			
+			<!-- 로그아웃 -->
+          	<sec:authorize access="isAuthenticated()">
+				<a href="#" class="nav-link" onclick="document.getElementById('logout-form').submit();">로그아웃</a>
+				<form id="logout-form" action='<c:url value='/logout'/>' method="POST">
+				   <input name="${_csrf.parameterName}" type="hidden" value="${_csrf.token}"/>
+				</form>
+			</sec:authorize>
+
           </li>
         </ul>
       </div>
@@ -76,14 +94,19 @@ request.setCharacterEncoding("UTF-8");
     <div class="row">
 
       <div class="col-lg-3">
+      
+		<sec:authorize access="isAuthenticated()">
+		<h5></h5>
 
-        <h3 class="my-4">친구 목록</h3>
+		<h3 class="my-4">친구 목록</h3>
         <div class="list-group">
+          <a href="#" class="list-group-item"><sec:authentication property="principal.username"/>님, 반갑습니다.</a>
+
           <a href="#" class="list-group-item">친구 1</a>
           <a href="#" class="list-group-item">친구 2</a>
-          <a href="#" class="list-group-item">친구 3</a>
         </div>
-
+		</sec:authorize>
+		
       </div>
       <!-- /.col-lg-3 -->
 

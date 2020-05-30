@@ -11,4 +11,10 @@ public class LoginController {
 		
 		return "/login/loginForm";
 	}
+	
+    @RequestMapping(value="/access_denied")
+    public String accessDeniedPage() throws Exception {
+        return "/access_denied";
+    }
+
 }

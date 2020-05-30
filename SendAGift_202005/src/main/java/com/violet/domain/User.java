@@ -14,7 +14,10 @@ public class User {
 	private String user_filename;
 	private String f_user_id;
 	private String friend_id;
+	private String phone;
+	private String adress;
 	
+
 	private int gender;
 	private int friend_status;
 	private int user_level;
@@ -112,7 +115,18 @@ public class User {
 	public void setRegdate(Date regdate) {
 		this.regdate = regdate;
 	}
-	
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getAdress() {
+		return adress;
+	}
+	public void setAdress(String adress) {
+		this.adress = adress;
+	}
 	
 	
 	
